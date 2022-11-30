@@ -1,5 +1,7 @@
 local servers = {
 	"sumneko_lua",
+  "elixirls",
+  "efm",
 	-- "cssls",
 	-- "html",
 	-- "tsserver",
