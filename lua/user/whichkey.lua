@@ -90,10 +90,13 @@ local mappings = {
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>",
+    "<cmd>lua require('telescope.builtin').find_files()<cr>",
     "Find files",
   },
-  ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+  ["F"] = {
+    "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>",
+    "Find In Buffer",
+  },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   p = {
@@ -161,6 +164,7 @@ local mappings = {
   },
   s = {
     name = "Search",
+    t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },

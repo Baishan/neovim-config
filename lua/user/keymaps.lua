@@ -38,6 +38,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Buffer Save
 keymap("n", "<C-s>", ":update<CR>", opts)
 
+-- Fzf file
+keymap("n", "<C-p>", ":Files<CR>", opts)
+
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 -- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
